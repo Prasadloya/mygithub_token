@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  task: 
+   - name: i want tot install tree
+     apt:
+      name: tree
+      state: present
+   - name: run the webserver
+     apt:
+      name: webserver
+      state: present 
